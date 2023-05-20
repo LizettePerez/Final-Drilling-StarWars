@@ -128,13 +128,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 const fetchPeople = async () => {
-  const promises = [];
+  try {
+    const promises = [];
 
-  for (let id = 1; id <= 15; id++) {
-    const url = URL_PEOPLE + id;
-    promises.push(fetch(url).then(response => response.json()));
+    for (let id = 1; id <= 15; id++) {
+      const url = URL_PEOPLE + id;
+      promises.push(fetch(url).then(response => response.json()));
+    }
+
+    const characters = await Promise.all(promises);
+    return characters;
+  } catch (error) {
+    console.error('Error al obtener los datos:', error);
+    throw error;
   }
-
-  const characters = await Promise.all(promises);
-  return characters;
 };
