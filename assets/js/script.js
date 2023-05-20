@@ -39,7 +39,6 @@ const revealCharacter = (event, generator) => {
     console.log('done:', done);
     notGo = done;
   } else {
-    console.log('Nada más que mostrar');
     datos = undefined;
   }
 };
