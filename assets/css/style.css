@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
-
 #btnReveal1,
 #btnReveal2,
 #btnReveal3 {
@@ -18,35 +14,23 @@ body {
 a {
   text-decoration: none;
   font-size: 17px;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-}
+  text-align: justify;
+  color: #000;
 
-#btnReveal1 {
-  text-shadow: 0 0 5px rgb(233, 8, 8), 0 0 10px rgb(233, 8, 8), 0 0 15px rgb(233, 8, 8), 0 0 20px rgb(233, 8, 8);
 }
 
 #btnReveal1:hover {
-  color: #fa8072;
+  color: #fff;
   text-shadow: 0 0 5px rgb(233, 8, 8), 0 0 10px rgb(233, 8, 8), 0 0 15px rgb(233, 8, 8), 0 0 20px rgb(233, 8, 8);
 }
 
-#btnReveal2 {
-  text-shadow: 0 0 5px rgb(25, 228, 7), 0 0 10px rgb(25, 228, 7), 0 0 15px rgb(25, 228, 7), 0 0 20px rgb(25, 228, 7);
-}
-
 #btnReveal2:hover {
-  color: #90ee90;
+  color: #fff;
   text-shadow: 0 0 5px rgb(25, 228, 7), 0 0 10px rgb(25, 228, 7), 0 0 15px rgb(25, 228, 7), 0 0 20px rgb(25, 228, 7);
-}
-
-#btnReveal3 {
-  text-shadow: 0 0 5px rgb(7, 213, 228), 0 0 10px rgb(7, 213, 228), 0 0 15px rgb(7, 213, 228), 0 0 20px rgb(7, 213, 228);
 }
 
 #btnReveal3:hover {
-  color: #87cefa;
+  color: #fff;
   text-shadow: 0 0 5px rgb(7, 213, 228), 0 0 10px rgb(7, 213, 228), 0 0 15px rgb(7, 213, 228), 0 0 20px rgb(7, 213, 228);
 }
 
@@ -55,21 +39,25 @@ a {
 main {
   margin: 0 auto;
   padding: 0 40px;
-  background-color: black;
+  width: 85%;
 }
 
 .card {
   margin-bottom: 10px;
-  min-height: 170px;
-  background-color: black;
+  padding-top: 5px;
   cursor: pointer;
-  display: flex;
+  box-shadow: inset;
+  border: none;
+  box-shadow: 0 0 5px #cecece85, 0 0 10px #cecece85;
+  width: 95%;
 }
 
 .card-title {
   font-weight: bold;
   font-size: 18px;
   padding-bottom: 10px;
+  text-align: justify;
+  margin: 0;
 }
 
 p {
@@ -88,56 +76,48 @@ p {
 }
 
 h1 {
-  font-family: 'Star Wars', sans-serif;
   text-align: center;
-  /* color: #ffe81f; */
-  color: white;
   /* text-shadow: 0 0 5px rgb(246, 234, 8), 0 0 10px rgb(246, 234, 8); */
   margin: 20px 0;
 
 }
 
-.container1 .card {
-  border: 2px solid #fa8072;
-  border-radius: 10px;
-  color: #c5c6c8;
-}
-
 .container1 .card:hover {
-  border: 2px solid #fa8072;
-  border-radius: 10px;
   color: black;
   box-shadow: 0 0 5px #fa8072,
     0 0 10px #fa8072;
   background-color: #fa8072;
 }
 
-.container2 .card {
-  border: 2px solid #90ee90;
-  border-radius: 10px;
-  color: #c5c6c8;
-}
-
 .container2 .card:hover {
-  border: 2px solid #90ee90;
-  border-radius: 10px;
   color: black;
   box-shadow: 0 0 5px #90ee90,
     0 0 10px #90ee90;
   background-color: #90ee90;
 }
 
-.container3 .card {
-  border: 2px solid #87cefa;
-  border-radius: 10px;
-  color: #c5c6c8;
-}
-
 .container3 .card:hover {
-  border: 2px solid #87cefa;
-  border-radius: 10px;
   color: black;
   box-shadow: 0 0 5px #87cefa,
     0 0 10px #87cefa;
   background-color: #87cefa;
 }
+
+.card-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.card-icon {
+  padding: 10px;
+  margin-left: 30px ;
+}
+
+.v-line{
+  border-left: 3px solid #dedede;
+  height: 100%;
+  left: 13.1%;
+  top: 0;
+  position: absolute;
+  display: none;
+ }
